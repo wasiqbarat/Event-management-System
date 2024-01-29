@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1010.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RequestEventDetail">
+   <tabs>
+      <Tab text="Search Patient">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <bottom>
+                  <HBox prefHeight="39.0" prefWidth="979.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="32.0" prefWidth="178.0" text="Cancel" textFill="#f20303">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="300.0" />
+                     </padding>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </HBox>
+               </bottom>
+               <center>
+                  <TitledPane animated="false" collapsible="false" prefHeight="445.0" prefWidth="969.0" text="Patients" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="appointmentTableView" prefHeight="408.0" prefWidth="947.0">
+                                 <columns>
+                                    <TableColumn fx:id="noColumn" maxWidth="37.0" minWidth="17.0" prefWidth="26.0" resizable="false" text="NO" />
+                                    <TableColumn fx:id="idColumn" maxWidth="1000.0" minWidth="0.0" prefWidth="56.0" text="ID" />
+                                    <TableColumn fx:id="nameColumn" maxWidth="1000.0" prefWidth="132.0" text="Name" />
+                                    <TableColumn fx:id="fatherNameColumn" maxWidth="1000.0" minWidth="0.0" prefWidth="148.0" text="Father name" />
+                                    <TableColumn fx:id="ageColumn" prefWidth="46.0" text="Age" />
+                                    <TableColumn fx:id="genderColumn" prefWidth="66.0" text="Gender" />
+                                    <TableColumn fx:id="addressColumn" maxWidth="1000.0" prefWidth="75.0" text="Address" />
+                                    <TableColumn fx:id="contactColumn" prefWidth="78.0" text="Contact" />
+                                    <TableColumn fx:id="referredBy" prefWidth="94.0" text="Reffered By" />
+                                    <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="162.0" text="Date" />
+                                    <TableColumn fx:id="resultColumn" maxWidth="1000.0" minWidth="0.0" text="Result" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </content>
+                     <BorderPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </BorderPane.margin>
+                  </TitledPane>
+               </center>
+               <top>
+                  <HBox alignment="CENTER" prefHeight="40.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="173.0">
+                           <children>
+                              <CheckBox fx:id="nameCheckBox" mnemonicParsing="false" selected="true" text="Name">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <TextField fx:id="name" onAction="#nameAction" prefHeight="35.0" prefWidth="153.0" promptText="Name">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="160.0">
+                           <children>
+                              <CheckBox fx:id="fatherNameCheckBox" mnemonicParsing="false" prefHeight="17.0" prefWidth="95.0" selected="true" text="Father name">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <TextField fx:id="fatherName" onAction="#fatherNameAction" prefHeight="34.0" prefWidth="140.0" promptText="Father name">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="173.0">
+                           <children>
+                              <CheckBox fx:id="addressCheckBox" mnemonicParsing="false" selected="true" text="Address">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <TextField fx:id="address" onAction="#addressAction" prefHeight="36.0" prefWidth="153.0" promptText="Address">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="167.0">
+                           <children>
+                              <CheckBox fx:id="idCheckBox" mnemonicParsing="false" selected="true" text="ID">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <TextField fx:id="id" onAction="#idAction" prefHeight="35.0" prefWidth="147.0" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#SearchButtonPressed" prefHeight="34.0" prefWidth="171.0" text="Search">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="19.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/search2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
