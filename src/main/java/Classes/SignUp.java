@@ -1,10 +1,18 @@
 package Classes;
 
 public class SignUp {
-    private String username;
-    private String password;
-    private String signUpMethod;
-    private String confirmationCode;
+    private Database database;
+    private User user;
+
+    public SignUp(User user) {
+        database = Database.getInstance();
+        this.user = user;
+    }
+
+
+    public void SignUp() {
+        database.SignUp(user);
+    }
 
 
 }

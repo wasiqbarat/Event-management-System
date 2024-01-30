@@ -18,7 +18,7 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1010.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RequestEventDetail">
    <tabs>
-      <Tab text="Search Patient">
+      <Tab>
          <content>
             <BorderPane prefHeight="200.0" prefWidth="200.0">
                <bottom>
@@ -51,12 +51,10 @@
                                     <TableColumn fx:id="noColumn" maxWidth="37.0" minWidth="17.0" prefWidth="26.0" resizable="false" text="NO" />
                                     <TableColumn fx:id="idColumn" maxWidth="1000.0" minWidth="0.0" prefWidth="56.0" text="ID" />
                                     <TableColumn fx:id="nameColumn" maxWidth="1000.0" prefWidth="132.0" text="Name" />
-                                    <TableColumn fx:id="fatherNameColumn" maxWidth="1000.0" minWidth="0.0" prefWidth="148.0" text="Father name" />
                                     <TableColumn fx:id="ageColumn" prefWidth="46.0" text="Age" />
                                     <TableColumn fx:id="genderColumn" prefWidth="66.0" text="Gender" />
                                     <TableColumn fx:id="addressColumn" maxWidth="1000.0" prefWidth="75.0" text="Address" />
                                     <TableColumn fx:id="contactColumn" prefWidth="78.0" text="Contact" />
-                                    <TableColumn fx:id="referredBy" prefWidth="94.0" text="Reffered By" />
                                     <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="162.0" text="Date" />
                                     <TableColumn fx:id="resultColumn" maxWidth="1000.0" minWidth="0.0" text="Result" />
                                  </columns>

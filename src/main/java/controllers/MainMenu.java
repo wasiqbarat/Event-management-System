@@ -89,19 +89,8 @@ public class MainMenu extends Controller implements Initializable {
 
     @FXML
     void requestEventDetail(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("RequestEventDetail.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage stage = new Stage();
-
-        Scene scene = new Scene(root);
-        stage.setTitle(appName);
-        stage.getIcons().add(new Image("file:src\\main\\resources\\assets\\icon2.png"));
-
-        stage.setScene(scene);
-        stage.show();
+        eventManagementSystem.requestEventsDetail(getCurrentUserName());
     }
-
-
 
 
     @Override

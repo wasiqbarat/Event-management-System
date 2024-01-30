@@ -4,10 +4,8 @@ module se.se {
 
     requires org.controlsfx.controls;
 
-
     opens se.se to javafx.fxml;
     opens controllers to javafx.fxml;
-    exports se.se;
-    exports controllers;
 
+    exports controllers;
 }

@@ -1,5 +1,6 @@
 package controllers;
 
+import Classes.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -40,14 +41,19 @@ public class firstMenu extends Controller{
         }
 
 
+        if (!eventManagementSystem.logIn(usernameString, passwordString, 1234) ) {
+            status.setText("Invalid username or password!");
+            return;
+        }
 
+        setCurrentUserName(usernameString);
+        setCurrentPassword(passwordString);
 
         try {
             gotoMainMenu(event);
         }catch (Exception e) {
             e.printStackTrace();
         }
-
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
     }

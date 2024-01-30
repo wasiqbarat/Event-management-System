@@ -1,16 +1,24 @@
 package controllers;
 
+import Classes.Event;
+import Classes.EventManagementSystem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class Controller {
     public String appName = "Event Management System";
+    public EventManagementSystem eventManagementSystem = EventManagementSystem.getInstance();
 
     private static String currentUserName = "";
     private static String currentPassword = "";
@@ -54,7 +62,21 @@ public class Controller {
         stage.setMaximized(false);
         stage.show();
     }
+    protected void checkIfEmpty(TextField textField) throws Exception {
+        if (textField.getText().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Information missed");
+            alert.setHeaderText("Please fill the required text field.");
 
+            ButtonType ok = new ButtonType("Ok", ButtonBar.ButtonData.OK_DONE);
+            alert.getButtonTypes().setAll(ok);
+            Optional<ButtonType> result = alert.showAndWait();
+            textField.requestFocus();
+            Exception IOException = new Exception("Field is empty!");
+            throw IOException;
+        }
+
+    }
 
 }
 

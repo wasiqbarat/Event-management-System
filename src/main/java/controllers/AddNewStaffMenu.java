@@ -115,7 +115,7 @@ public class AddNewStaffMenu extends Controller implements Initializable {
 
     }
 
-    void checkIfEmpty(TextField textField) throws Exception {
+    public void checkIfEmpty(TextField textField) throws Exception {
         if (textField.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Information missed");
